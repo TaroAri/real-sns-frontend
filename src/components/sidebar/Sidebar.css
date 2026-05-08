@@ -1,0 +1,58 @@
+li {
+  list-style: none;
+}
+
+.sidebarContainer {
+  width: 250px;
+  height: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebarButtonItems {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+
+.sidebarButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgb(188, 188, 188);
+  transition: box-shadow 0.5s ease;
+}
+
+.sidebarButton:hover {
+  box-shadow: none;
+}
+
+.sidebarUsers {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.loginUserItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loginUserIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
