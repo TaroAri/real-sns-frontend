@@ -3,12 +3,12 @@ li {
 }
 
 .sidebarContainer {
-  width: 250px;
+  flex: 2.5;
   height: 100%;
   margin: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 .sidebarButtonItems {
@@ -25,12 +25,16 @@ li {
   gap: 10px;
   padding: 5px;
   border-radius: 5px;
-  box-shadow: 1px 1px 4px rgb(188, 188, 188);
-  transition: box-shadow 0.5s ease;
+  box-shadow: 1px 1px 4px -1px rgb(188, 188, 188);
+  transition: box-shadow 0.3s ease;
 }
 
 .sidebarButton:hover {
-  box-shadow: none;
+  box-shadow: 1px 1px 4px rgb(188, 188, 188);
+}
+
+.sidebarLine {
+  border: 1px solid #e2e4e9;
 }
 
 .sidebarUsers {

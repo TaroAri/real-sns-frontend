@@ -52,7 +52,7 @@ export default function Sidebar() {
         </li>
       </ul>
 
-      <hr />
+      <hr className="sidebarLine" />
 
       <ul className="sidebarUsers">
         {loginUsers.map((loginUser) => (

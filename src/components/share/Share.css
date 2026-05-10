@@ -1,0 +1,72 @@
+.shareContainer {
+  padding: 20px 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgb(188, 188, 188);
+}
+
+.shareTextContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userIcon {
+  width: 48px;
+  height: 48px;
+}
+
+.shareInput {
+  width: 100%;
+  border: none;
+  resize: none;
+  overflow-y: hidden;
+}
+
+.shareInput:focus {
+  outline: none;
+}
+
+.line {
+  margin: 20px 20px;
+  border: 0.1px solid #e2e4e9;
+}
+
+.shareActionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.postActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.postActionsItem {
+  display: flex;
+  gap: 5px;
+}
+
+.postButton {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #2c517c;
+  color: white;
+  cursor: pointer;
+  transition:
+    opacity 0.15s,
+    transform 0.1s;
+}
+
+.postButton:hover {
+  opacity: 0.7;
+}
+
+.postButton:active {
+  opacity: 0.9;
+  transform: scale(0.95);
+}
