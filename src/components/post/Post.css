@@ -1,0 +1,43 @@
+.postContainer {
+  display: flex;
+  gap: 5px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgb(188, 188, 188);
+}
+
+.postMain {
+  width: 100%;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.postHeaderRight {
+  display: flex;
+  gap: 10px;
+}
+
+.postHeaderIcon {
+  width: 48px;
+  height: 48px;
+}
+
+.postHeaderUser {
+  font-weight: bold;
+}
+
+.relativeTimeContainer {
+  color: #999999;
+}
+
+.postContents {
+  margin-bottom: 10px;
+}
+
+.postImg {
+  width: 80%;
+}
