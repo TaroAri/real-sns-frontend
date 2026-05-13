@@ -34,7 +34,7 @@ export default function Timeline() {
       _id: "69fbe911505a3a0de84ee9ae",
       userId: "69cda9773e1e29e06bff9d6e",
       desc: "2回目の投稿です",
-      img: "sample.png",
+      img: "2",
       likes: ["69eb1e87734f83a2fe696ba0"],
       createdAt: "2026-05-07T01:21:21.293Z",
       updatedAt: "2026-05-07T02:14:50.084Z",
@@ -44,7 +44,7 @@ export default function Timeline() {
       _id: "69fbf937e3c02bbfaa06458c",
       userId: "69cda9773e1e29e06bff9d6e",
       desc: "n回目の投稿です",
-      img: "sample.png",
+      img: "3",
       likes: [],
       createdAt: "2026-05-07T02:30:15.591Z",
       updatedAt: "2026-05-07T02:30:15.591Z",
@@ -54,7 +54,7 @@ export default function Timeline() {
       _id: "69fbf93be3c02bbfaa06458e",
       userId: "69cda9773e1e29e06bff9d6e",
       desc: "n回目の投稿です",
-      img: "sample.png",
+      img: "4",
       likes: [],
       createdAt: "2026-05-07T02:30:19.205Z",
       updatedAt: "2026-05-07T02:30:19.205Z",
@@ -66,13 +66,15 @@ export default function Timeline() {
     <div className="timelineContainer">
       <Share _id={user._id} profilePicture={user.profilePicture} />
 
-      <Post
-        _id={user._id}
-        username={user.username}
-        profilePicture={user.profilePicture}
-        post={posts[0]}
-      />
       {/* 投稿の数だけ繰り返して表示する */}
+      {posts.map((post) => (
+        <Post
+          _id={user._id}
+          username={user.username}
+          profilePicture={user.profilePicture}
+          post={post}
+        />
+      ))}
     </div>
   );
 }
