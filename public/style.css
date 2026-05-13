@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+html,
+body {
+  overflow: hidden;
+}
+
 body {
   overscroll-behavior: none;
 }
