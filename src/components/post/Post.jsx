@@ -1,48 +1,40 @@
 import React from "react";
 import "./Post.css";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { Users } from "../../dummyData";
 
-export default function Post({ _id, username, profilePicture, post }) {
-  //投稿の経過時間の計算
-  const formatRelativeTime = (createdAt) => {
-    const elapsed = Date.now() - new Date(createdAt).getTime();
-    const units = [
-      { label: "年", ms: 1000 * 60 * 60 * 24 * 365 },
-      { label: "ヶ月", ms: 1000 * 60 * 60 * 24 * 30 },
-      { label: "日", ms: 1000 * 60 * 60 * 24 },
-      { label: "時間", ms: 1000 * 60 * 60 },
-      { label: "分", ms: 1000 * 60 },
-      { label: "秒", ms: 1000 },
-    ];
-    for (const { label, ms } of units) {
-      const value = Math.floor(elapsed / ms);
-      if (value >= 1) return value + label;
-    }
-  };
-
+export default function Post({ post }) {
   return (
     <div className="postContainer">
       <img
-        src={"assets/person/" + profilePicture + ".jpeg"}
+        src={Users.filter((User) => User.id === post.id)[0].profilePicture}
         className="postHeaderIcon"
         alt=""
       />
       <div className="postMain">
         <div className="postHeader">
           <div className="postHeaderRight">
-            <p className="postHeaderUser">{username}</p>
-            <p className="relativeTimeContainer">
-              {formatRelativeTime(post.createdAt) + "前"}
+            <p className="postHeaderUser">
+              {Users.filter((User) => User.id === post.id)[0].username}
             </p>
+            <p className="relativeTimeContainer">{post.date}</p>
           </div>
           <div className="postHeaderLeft">
             <MoreVertIcon />
           </div>
         </div>
         <div className="postContents">{post.desc}</div>
-        {post.img && (
-          <img src={"/assets/post/" + post.img + ".jpeg"} className="postImg" />
-        )}
+        {post.photo && <img src={post.photo} className="postImg" />}
+        <div className="reactionContainer">
+          <div className="likeContainer">
+            <FavoriteIcon htmlColor="red" />
+            <p className="likeText">{post.like}人がいいねを押しました</p>
+          </div>
+          <div className="commentContainer">
+            <p className="commentText">{post.comment}：コメント</p>
+          </div>
+        </div>
       </div>
     </div>
   );

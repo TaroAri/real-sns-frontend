@@ -2,24 +2,26 @@
   flex: 3.5;
   margin: 0 20px 20px 20px;
   padding-top: 20px;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
-.promotionTitle {
+.eventTitle {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.promotionStar {
+.eventStar {
   width: 56px;
   height: 56px;
 }
 
-.promotionTextStrong {
+.eventTextStrong {
   font-weight: bold;
 }
 
-.promotionImg {
+.eventImg {
   width: 100%;
   border-radius: 40px;
   margin: 20px 0;
@@ -59,4 +61,18 @@
 
 .onlineUserName {
   font-weight: bold;
+}
+
+.promotionTitle {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.promotionWrapper {
+  margin-bottom: 30px;
+}
+
+.promotionImg {
+  width: 100%;
+  border-radius: 20px;
 }
