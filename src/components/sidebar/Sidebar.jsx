@@ -9,6 +9,7 @@ import {
 } from "@mui/icons-material";
 import React from "react";
 import "./Sidebar.css";
+import { Users } from "../../dummyData";
 
 export default function Sidebar() {
   const loginUsers = [
@@ -55,14 +56,10 @@ export default function Sidebar() {
       <hr className="sidebarLine" />
 
       <ul className="sidebarUsers">
-        {loginUsers.map((loginUser) => (
-          <li key={loginUser.userId} className="loginUserItem">
-            <img
-              src={"/assets/person/" + loginUser.icon}
-              alt=""
-              className="loginUserIcon"
-            />
-            <span className="loginUserName">{loginUser.name}</span>
+        {Users.map((user) => (
+          <li key={user.id} className="loginUserItem">
+            <img src={user.profilePicture} alt="" className="loginUserIcon" />
+            <span className="loginUserName">{user.username}</span>
           </li>
         ))}
       </ul>

@@ -1,10 +1,18 @@
 import React from "react";
+import { useState } from "react";
 import "./Post.css";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Users } from "../../dummyData";
 
 export default function Post({ post }) {
+  const [like, setLike] = useState(post.like);
+  const [isLiked, setIsLiked] = useState(false);
+  const handleLike = () => {
+    setLike(isLiked ? like - 1 : like + 1);
+    setIsLiked(!isLiked);
+  };
   return (
     <div className="postContainer">
       <img
@@ -28,8 +36,11 @@ export default function Post({ post }) {
         {post.photo && <img src={post.photo} className="postImg" />}
         <div className="reactionContainer">
           <div className="likeContainer">
-            <FavoriteIcon htmlColor="red" />
-            <p className="likeText">{post.like}人がいいねを押しました</p>
+            {isLiked && <FavoriteIcon htmlColor="red" onClick={handleLike} />}
+            {!isLiked && (
+              <FavoriteBorderIcon htmlColor="red" onClick={handleLike} />
+            )}
+            <p className="likeText">{like}人がいいねを押しました</p>
           </div>
           <div className="commentContainer">
             <p className="commentText">{post.comment}：コメント</p>
