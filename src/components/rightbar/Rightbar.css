@@ -1,3 +1,4 @@
+/* 共通部分 */
 .rightbarContainer {
   flex: 3.5;
   margin: 0 20px 20px 20px;
@@ -6,6 +7,7 @@
   scrollbar-width: none;
 }
 
+/* Home */
 .eventTitle {
   display: flex;
   align-items: center;
@@ -78,4 +80,39 @@
 .promotionImg {
   width: 100%;
   border-radius: 20px;
+}
+
+/* Profile */
+.profileInformationText {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.profileHomeTown {
+  color: #474747;
+  margin-bottom: 15px;
+}
+
+.profileFriendsTitle {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.profileFriendsList {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.profileFriendIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileFriendName {
+  text-align: center;
+  font-size: 12px;
 }

@@ -1,0 +1,44 @@
+.profileMain {
+  display: flex;
+  margin-top: 50px;
+}
+
+.profileContents {
+  flex: 10.5;
+}
+
+.profileBackground {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profileIcon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: -70px auto 10px;
+}
+
+.profileName {
+  font-size: 20px;
+  text-align: center;
+}
+
+.profileDesc {
+  text-align: center;
+  font-size: 14px;
+}
+
+.profileInformationBottom {
+  margin: 10px 10px 0;
+  border: 1px solid #e2e4e9;
+}
+
+.profileContentsBottom {
+  display: flex;
+  height: calc(
+    100vh - 50px - 200px
+  ); /* 50px: topbar, 200px: profileInformations の高さ */
+  overflow: hidden;
+}
